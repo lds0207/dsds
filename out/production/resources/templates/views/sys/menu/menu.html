@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layouts/defaultLayout"
+>
+    <!-- index.html 고유 CSS 추가 -->
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" type="text/css" href="/css/app/sys/menu/menu.css">
+    </th:block>
+
+    <!-- index.html 고유 스크립트 추가 -->
+    <th:block layout:fragment="script">
+        <script src="/js/app/sys/menu/menu.js"></script>
+    </th:block>
+    <!-- Page Contents -->
+    <body layout:fragment="content">
+        <div class="div-main">ex</div>
+        <div class="ui stackable two column grid" style="height: 100%;">
+            <input type="text" id="CCSY120_UP_MENU_ID" style="display:none;">
+            <div class="column">
+                <div class="ui sixteen wide header"> 대메뉴 관리</div>
+                <div class="div-flex-mgb5">
+                    <button class="ui animated fade primary button four wide column" id="CCSY120_btn_big_new">
+                        <div class="visible content">신규</div>
+                        <div class="hidden content">
+                            new
+                        </div>
+                    </button>
+                    <button class="ui animated fade red button four wide column" id="CCSY120_btn_big_del">
+                        <div class="visible content">삭제</div>
+                        <div class="hidden content">
+                            <i class="trash alternate icon"></i>
+                        </div>
+                    </button>
+                    <div class="ui two wide animated fade button" id="CCSY120_btn_big_refresh">
+                        <div class="visible content"><i class="refresh icon"></i> </div>
+                        <div class="hidden content">
+                            새로고침
+                        </div>
+                    </div>
+                    <button class="ui animated fade primary button four wide column" id="CCSY120_btn_big_save">
+                        <div class="visible content">저장</div>
+                        <div class="hidden content">
+                            <i class="save icon"></i>
+                        </div>
+                    </button>
+                </div>
+                <div class="sixteen wide wide ag-theme-balham" style="width: 100%; height: calc(100% - 5rem);" id="CCSY120_grid_big" ></div>
+            </div>
+            <div class="column">
+                <div class="ui sixteen wide header"> 소메뉴 관리</div>
+                <div class="div-flex-mgb5">
+                    <button class="ui animated fade primary button four wide column" id="CCSY120_btn_sml_new">
+                        <div class="visible content">신규</div>
+                        <div class="hidden content">
+                            new
+                        </div>
+                    </button>
+                    <button class="ui animated fade red button four wide column" id="CCSY120_btn_sml_del">
+                        <div class="visible content">삭제</div>
+                        <div class="hidden content">
+                            <i class="trash alternate icon"></i>
+                        </div>
+                    </button>
+                    <div class="ui two wide animated fade button" id="CCSY150_btn_sml_refresh">
+                        <div class="visible content"><i class="refresh icon"></i> </div>
+                        <div class="hidden content">
+                            새로고침
+                        </div>
+                    </div>
+                    <button class="ui animated fade primary button four wide column" id="CCSY120_btn_sml_save">
+                        <div class="visible content">저장</div>
+                        <div class="hidden content">
+                            Save
+                        </div>
+                    </button>
+                </div>
+                <div class="ui sixteen wide ag-theme-balham" style="width: 100%; height: calc(100% - 5rem);" id="CCSY120_grid_sml" ></div>
+            </div>
+
+        </div>
+
+
+    </body>
+
+</html>

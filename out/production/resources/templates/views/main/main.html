@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+        layout:decorator="layouts/mainLayout"
+>
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+    <link rel="stylesheet" type="text/css" href="/css/app/main/main.css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <script src="/js/app/main/main.js"></script>
+</th:block>
+<!-- Page Contents -->
+
+<div class="sidebar"></div>
+    <body layout:fragment="content">
+            <!-- Following Menu -->
+            <div class="ui large top fixed hidden menu">
+                <div class="ui container">
+                    <a href="/" class="header item" style="font-size: large;">
+                        ITZON
+                    </a>
+                    <a class="active item">Best</a>
+                    <a class="item">상의</a>
+                    <a class="item">아우터</a>
+                    <a class="item">하의</a>
+                    <a class="item" href="/SYS/MENU">가방</a>
+                    <a class="item" href="/SYS/GRID">신발</a>
+                    <div class="right menu">
+                        <div class="item">
+                            <a class="ui button">Log in</a>
+                        </div>
+                        <div class="item">
+                            <a class="ui primary button">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <div class="ui vertical inverted sidebar menu">
+                <a href="/" class="header item" style="font-size: large;">
+                    ITZON
+                </a>
+                <a class="active item">Best</a>
+                <a class="item">상의</a>
+                <a class="item">아우터</a>
+                <a class="item">하의</a>
+                <a class="item">Login</a>
+                <a class="item">Signup</a>
+                <a class="item" href="/SYS/MENU">가방</a>
+                <a class="item" href="/SYS/GRID">신발</a>
+            </div>
+
+            <!-- Page Contents -->
+            <div class="pusher">
+                <div class="ui inverted vertical masthead center aligned segment">
+
+                    <div class="ui container">
+                        <div class="ui large secondary inverted pointing menu">
+                            <a class="toc item">
+                                <i class="sidebar icon"></i>
+                            </a>
+                            <a href="/" class="header item" style="font-size: large;">
+                                DS
+                            </a>
+                            <a class="active item" href="/SYS/BEST">Best</a>
+                            <a class="item" href="/SYS/TOP">상의</a>
+                            <a class="item" href="/SYS/OUTER">아우터</a>
+                            <a class="item" href="/SYS/BOTTOM">하의</a>
+                            <a class="item" href="/SYS/MENU">가방</a>
+                            <a class="item" href="/SYS/GRID">신발</a>
+                            <a class="item" href="/SYS/QUESTION">건의 사항</a>
+                            <a class="item"></a>
+                            <a class="item"></a>
+                            <a class="item"></a>
+                            <a class="item"></a>
+                            <a class="item"></a>
+                            <a class="item">안녕하세요 dongsung 입니다.</a>
+                            <div class="right item">
+                                <a class="ui inverted button" id="MAIN_btnLogin" sec:authorize="isAnonymous()" th:href="@{/login}">Log in</a>
+                                <a class="ui inverted button" id="MAIN_btnLogout" sec:authorize="isAuthenticated()" th:href="@{/logout}">Log out</a>
+                                <a class="ui inverted button" id="MAIN_btnSignUp" sec:authorize="isAnonymous()" th:href="@{/signup}">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui text container">
+                        <h1 class="ui inverted header">
+                            WelCome
+                        </h1>
+                        <h2>Do u want more? Get In.</h2>
+                        <div id="example" >Click Here <i class="right arrow icon"></i></div>
+                    </div>
+
+                </div>
+
+                <div class="ui vertical stripe segment">
+                    <div class="ui middle aligned stackable grid container">
+                        <div class="row">
+                            <div class="eight wide column">
+                                <h3 class="ui header">We Help Companies and Companions</h3>
+                                <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
+                                <h3 class="ui header">We Make Bananas That Can Dance</h3>
+                                <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
+                            </div>
+                            <div class="six wide right floated column">
+                                <img src="/img/top2.jpg" class="ui large bordered rounded image">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="center aligned column">
+                                <a class="ui huge button">Check Them Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ui vertical stripe quote segment">
+                    <div class="ui equal width stackable internally celled grid">
+                        <div class="center aligned row">
+                            <div class="column">
+                                <h3>"What a Company"</h3>
+                                <p>That is what they all say about us</p>
+                            </div>
+                            <div class="column">
+                                <h3>"I shouldn't have gone with their competitor."</h3>
+                                <p>
+                                    <img src="img/shoes.jpg" class="ui avatar image"> <b>100%</b> 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100% 정품임을 보증합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui vertical stripe segment">
+                    <div class="ui text container">
+                        <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+                        <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+                        <a class="ui large button">Read More</a>
+                        <h4 class="ui horizontal header divider">
+                            <a href="#">Case Studies</a>
+                        </h4>
+                        <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+                        <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
+                        <a class="ui large button">I'm Still Quite Interested</a>
+                    </div>
+                </div>
+            </div>
+    </body>
+
+</html>

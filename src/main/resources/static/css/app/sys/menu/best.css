@@ -1,0 +1,84 @@
+/*
+{
+margin:0;
+padding:0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.menu_wrap .dep1 {
+    font-size:0;
+}
+.menu_wrap .dep1 > li {
+    display: inline-block;
+    width:100px;
+    vertical-align: top;
+    background: #ddd;
+    text-align: left;
+    font-size: 16px;
+}
+
+.menu_wrap .dep1 > li:hover > a {
+    background: #0d71bb;
+    color: #5e9cd3;
+}
+
+.menu_wrap .dep1 > li > a {
+    display: block;
+    padding: 10px 0;
+}
+
+.menu_wrap .dep2 {
+    display: none;
+    background: #00c22e;
+}
+
+.menu_wrap .dep1 > li:hover > .dep2 {
+    display: block;
+}
+
+.menu_wrap .dep2 a {
+    display: block;
+    padding: 10px 0;
+}
+
+.menu_wrap .dep2 a:hover {
+    text-decoration: underline;
+}
+*/
+.input[id="menuicon"]{
+    display: none;
+}
+.input[id="menuicon"] + label{
+    display: block;
+    width: 60px;
+    height: 40px;
+    position: relative;
+    cursor:pointer;
+}
+.input[id="menuicon"] + label span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #000;
+    transition: all .35s;
+}
+.input[id="menuicon"] :checked + label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50) rotate(45deg);
+}
+.input[id="menuicon"] :checked + label span:nth-child(2){
+    opacity: 0;
+}
+.input[id="menuicon"] :checked + label span:nth-child(3){
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+

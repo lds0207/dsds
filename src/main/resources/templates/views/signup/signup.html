@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layouts/signupLayout"
+>
+<!-- index.html 고유 CSS 추가 -->
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" type="text/css" href="/css/app/signup/signup.css">
+    </th:block>
+
+    <!-- index.html 고유 스크립트 추가 -->
+    <th:block layout:fragment="script">
+        <script src="/js/app/signup/signup.js"></script>
+    </th:block>
+    <!-- Page Contents -->
+    <body layout:fragment="content">
+    <div class="ui main text container">
+        <h2 class="ui header">회원가입</h2>
+
+        <form class="ui form" id="SIGNUP_formSignup">
+            <div class="field">
+                <label>아이디</label>
+                <input type="text" id="SIGNUP_userId" placeholder="ID">
+            </div>
+            <div class="field">
+                <label>이름</label>
+                <input type="text" id="SIGNUP_userNm" placeholder="NAME">
+            </div>
+            <div class="field">
+                <label>비밀번호</label>
+                <input type="password" id="SIGNUP_userPw" placeholder="PW">
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>나는 회원가입 약관 및 정보제공에 동의합니다.</label>
+                </div>
+            </div>
+            <button class="ui button" id="SIGNUP_btnSignUp" onclick="location.href='/'">회원가입</button>
+            <button class="ui button" type="password" onclick="location.href='/'">취소</button>
+        </form>
+    </div>
+
+
+
+    </body>
+</html>

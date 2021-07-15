@@ -1,0 +1,174 @@
+<!--
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+        layout:decorator="layouts/mainLayout"
+>
+&lt;!&ndash; index.html 고유 CSS 추가 &ndash;&gt;
+<th:block layout:fragment="css">
+    <link rel="stylesheet" type="text/css" href="/css/app/sys/main/main.css">
+</th:block>
+
+&lt;!&ndash; index.html 고유 스크립트 추가 &ndash;&gt;
+<th:block layout:fragment="script">
+    <script src="/js/app/sys/main/main.js"></script>
+</th:block>
+&lt;!&ndash; Page Contents &ndash;&gt;
+
+
+<body layout:fragment="content">
+<div class="div-main">ex</div>
+<div class="ui stackable two column grid" style="height: 100%;">
+    <input type="text" id="CCSY120_UP_MENU_ID" style="display:none;">
+    <div class="column">
+        <div class="ui sixteen wide header"> 대메뉴 관리</div>
+        <div class="div-flex-mgb5">
+            <button class="ui animated fade primary button four wide column" id="CCSY120_btn_big_new">
+                <div class="visible content">신규</div>
+                <div class="hidden content">
+                    new
+                </div>
+            </button>
+            <button class="ui animated fade red button four wide column" id="CCSY120_btn_big_del">
+                <div class="visible content">삭제</div>
+                <div class="hidden content">
+                    <i class="trash alternate icon"></i>
+                </div>
+            </button>
+            <div class="ui two wide animated fade button" id="CCSY120_btn_big_refresh">
+                <div class="visible content"><i class="refresh icon"></i> </div>
+                <div class="hidden content">
+                    새로고침
+                </div>
+            </div>
+            <button class="ui animated fade primary button four wide column" id="CCSY120_btn_big_save">
+                <div class="visible content">저장</div>
+                <div class="hidden content">
+                    <i class="save icon"></i>
+                </div>
+            </button>
+        </div>
+        <div class="sixteen wide wide ag-theme-balham" style="width: 100%; height: calc(100% - 5rem);" id="CCSY120_grid_big" ></div>
+    </div>
+    <div class="column">
+        <div class="ui sixteen wide header"> 소메뉴 관리</div>
+        <div class="div-flex-mgb5">
+            <button class="ui animated fade primary button four wide column" id="CCSY120_btn_sml_new">
+                <div class="visible content">신규</div>
+                <div class="hidden content">
+                    new
+                </div>
+            </button>
+            <button class="ui animated fade red button four wide column" id="CCSY120_btn_sml_del">
+                <div class="visible content">삭제</div>
+                <div class="hidden content">
+                    <i class="trash alternate icon"></i>
+                </div>
+            </button>
+            <div class="ui two wide animated fade button" id="CCSY150_btn_sml_refresh">
+                <div class="visible content"><i class="refresh icon"></i> </div>
+                <div class="hidden content">
+                    새로고침
+                </div>
+            </div>
+            <button class="ui animated fade primary button four wide column" id="CCSY120_btn_sml_save">
+                <div class="visible content">저장</div>
+                <div class="hidden content">
+                    Save
+                </div>
+            </button>
+        </div>
+        <div class="ui sixteen wide ag-theme-balham" style="width: 100%; height: calc(100% - 5rem);" id="CCSY120_grid_sml" ></div>
+    </div>
+
+</div>
+
+
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+        layout:decorator="layouts/mainLayout"
+>
+    <!-- index.html 고유 CSS 추가 -->
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" type="text/css" href="/css/app/main/main.css">
+    </th:block>
+
+    <!-- index.html 고유 스크립트 추가 -->
+    <th:block layout:fragment="script">
+        <script src="/js/app/main/main.js"></script>
+    </th:block>
+    <!-- Page Contents -->
+
+    <body layout:fragment="content">
+        <!-- Following Menu -->
+        <div class="ui large top fixed hidden menu">
+            <div class="ui container">
+                <a href="/" class="header item" style="font-size: large;">
+                    ITZON
+                </a>
+                <a class="active item">Best</a>
+                <a class="item">상의</a>
+                <a class="item">아우터</a>
+                <a class="item">하의</a>
+                <a class="item" href="/SYS/MENU">가방</a>
+                <a class="item" heref="/SYS/GRID">신발</a>
+                <div class="right menu">
+                    <div class="item">
+                        <a class="ui button">Log in</a>
+                    </div>
+                    <div class="item">
+                        <a class="ui primary button">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <div class="ui vertical inverted sidebar menu">
+            <a href="/" class="header item" style="font-size: large;">
+                ITZON
+            </a>
+            <a class="active item">Best</a>
+            <a class="item">상의</a>
+            <a class="item">아우터</a>
+            <a class="item">하의</a>
+            <a class="item">Login</a>
+            <a class="item">Signup</a>
+            <a class="item" href="/SYS/MENU">가방</a>
+            <a class="item" href="/SYS/GRID">신발</a>
+        </div>
+
+        <!-- Page Contents -->
+        <div class="pusher">
+            <div class="ui inverted vertical masthead center aligned segment">
+
+                <div class="ui container">
+                    <div class="ui large secondary inverted pointing menu">
+                        <a class="toc item">
+                            <i class="sidebar icon"></i>
+                        </a>
+                        <a href="/" class="header item" style="font-size: large;">
+                            ITZON
+                        </a>
+                        <a class="active item" href="/SYS/BEST">Best</a>
+                        <a class="item" href="/SYS/TOP">상의</a>
+                        <a class="item" href="/SYS/OUTER">아우터</a>
+                        <a class="item" href="/SYS/BOTTOM">하의</a>
+                        <a class="item" href="/SYS/MENU">가방</a>
+                        <a class="item" href="/SYS/GRID">신발</a>
+                        <a class="item" href="/SYS/QUESTION">건의 사항</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+
+</html>

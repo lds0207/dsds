@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layouts/loginLayout"
+>
+    <!-- index.html 고유 CSS 추가 -->
+    <th:block layout:fragment="css">
+    </th:block>
+
+    <!-- index.html 고유 스크립트 추가 -->
+    <th:block layout:fragment="script">
+    </th:block>
+    <!-- Page Contents -->
+    <body layout:fragment="content" style="background-image: url('/img/backgroung.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <div class="ui middle aligned center aligned grid" style="height: 100%">
+            <div class="column" style="max-width: 450px;">
+                <!--<h2 class="ui black image header">
+                    <img src="image/INAFlogoWhite.png" class="image" style="margin-top: -100px">
+                    <div class="content">
+                        Log in to your Account
+                    </div>
+                </h2>-->
+
+                <form class="ui large form" method="POST" action="/login" style="opacity: 0.9;">
+                    <div class="ui stacked segment">
+                        <div class="ui middle image">
+                            즐거운 쇼핑하시길 바랍니다.
+<!--                            <img class="logo" src="/image/Eugene_Wordmark.jpg" style="width: 100%; margin: 10px 10px 30px 10px;">-->
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="username" id="username" placeholder="ID">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" id="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button class="ui fluid large black submit button" id="btn-login-main">Login</button>
+                        </div>
+                        <div class="field" style="display: none;">
+                            <a href="/signup"><div class="ui fluid large black submit button">Sign up</div></a>
+                        </div>
+                    </div>
+                    <div class="ui error message">등록되지 않은 ID이거나 비밀번호가 올바르지 않습니다.</div>
+                    <div class="ui error message"></div>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>

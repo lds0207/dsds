@@ -19,11 +19,7 @@ spring:
 
   session:
     store-type: jdbc
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3306/homepage
-    username: test
-    password: test
-    driver-class-name: org.mariadb.jdbc.Driver
+
 
 server:
   port: 8077

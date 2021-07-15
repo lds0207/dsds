@@ -5,6 +5,26 @@ spring:
     restart:
       enable: true
 
+  jpa:
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: true
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      show-sql: false
+
+  session:
+    store-type: jdbc
+  datasource:
+    url: jdbc:mysql://112.216.47.34:3306/homepage
+    username: test
+    password: test
+    driver-class-name: org.mariadb.jdbc.Driver
+
 server:
   port: 8077
 

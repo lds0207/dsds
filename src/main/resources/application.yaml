@@ -20,7 +20,7 @@ spring:
   session:
     store-type: jdbc
   datasource:
-    url: jdbc:mysql://112.216.47.34:3306/homepage
+    url: jdbc:mysql://localhost/homepage
     username: test
     password: test
     driver-class-name: org.mariadb.jdbc.Driver
